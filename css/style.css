@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, li, p, figure {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:focus, input, textarea, button {
+  border: none;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+form {
+  margin: 0;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.container {
+  max-width: 1222px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 20px;
+  background: url("../images/header-bg.png") right bottom no-repeat;
+  background-size: cover;
+  height: 700px;
+  position: relative;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  width: 82px;
+  height: 122px;
+  bottom: 20px;
+  right: 50px;
+  background: url("../images/pawn.png") no-repeat;
+}
+.header__logo {
+  margin-bottom: 40px;
+}
+.header__title {
+  font-family: "Merriweather";
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 40px;
+}
+.header__text {
+  text-align: center;
+  max-width: 486px;
+  font-size: 18px;
+  color: #313131;
+  margin-bottom: 35px;
+}
+.header .header-links {
+  display: flex;
+}
+.header .header-links__link {
+  display: inline-block;
+  font-size: 16px;
+  width: 250px;
+  padding: 15px 53px;
+  text-align: center;
+  border-radius: 40px;
+  transition: 0.4s ease;
+}
+.header .header-links__link_first {
+  background-color: #1F1F1F;
+  color: #FFF;
+  margin-right: 15px;
+}
+.header .header-links__link_first:hover {
+  background-color: #FBCE51;
+  color: #1F1F1F;
+}
+.header .header-links__link_second {
+  outline: 2px solid #1F1F1F;
+}
+.header .header-links__link_second:hover {
+  background-color: #1F1F1F;
+  color: #FFF;
+}
+
+.line {
+  overflow: hidden;
+  position: relative;
+  background-color: #F54932;
+}
+.line__wrapper {
+  display: flex;
+}
+.line__text {
+  white-space: nowrap;
+  color: #FFF;
+  font-size: 22px;
+  text-transform: uppercase;
+  animation: 15s linear infinite running-text;
+  padding: 10px 20px;
+}
+@keyframes running-text {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.support {
+  padding: 40px 0 60px 0;
+}
+.support .support-lecture {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.support .support-lecture__title {
+  font-family: "Merriweather";
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.support .support-lecture__title_topic {
+  color: #F54932;
+}
+.support .support-lecture__title_mobile {
+  display: none;
+}
+.support .support-lecture__pic {
+  max-width: 100%;
+  border-radius: 50%;
+}
+.support .support-game {
+  display: flex;
+  align-items: center;
+}
+.support .support-game__pic {
+  max-width: 474px;
+}
+.support .support-game__wrapper {
+  margin-left: 35px;
+}
+.support .support-game__title {
+  font-family: "Merriweather";
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.support .support-game__title_topic {
+  color: #F54932;
+}
+.support .support-game .game-table {
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+.support .support-game .game-table__row:first-child .game-table__data {
+  padding-top: 0;
+  padding-bottom: 15px;
+}
+.support .support-game .game-table__row:last-child .game-table__data {
+  border-bottom: 0;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+.support .support-game .game-table__data {
+  font-size: 18px;
+  color: #313131;
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  border-color: #D0D0D0;
+}
+.support .support-game .game-table__data_name {
+  opacity: 0.7;
+  padding: 15px 15px 15px 0;
+}
+.support .support-game .game-table__data_desc {
+  font-weight: 700;
+  border-right: 0;
+  padding-left: 15px;
+}
+.support .support-game .game-table__data_del {
+  text-decoration: line-through;
+  text-decoration-color: #F54932;
+  text-decoration-thickness: 2px;
+}
+.support .support-game__link {
+  font-size: 18px;
+  color: #3057A2;
+}
+
+.about {
+  padding-bottom: 120px;
+}
+.about__wrapper {
+  max-width: 800px;
+  margin-bottom: 35px;
+}
+.about__title {
+  font-family: "Merriweather";
+  text-transform: uppercase;
+  font-size: 54px;
+  color: #313131;
+  font-weight: 400;
+  display: inline;
+}
+.about__link {
+  display: inline-block;
+  font-size: 18px;
+  color: #3057A2;
+  width: 280px;
+}
+.about__stages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(112px, 1fr));
+  grid-gap: 20px;
+}
+.about .about-stage {
+  display: flex;
+  align-items: flex-start;
+  background: url("../images/stage-bg.png");
+  padding: 20px;
+}
+.about .about-stage:nth-child(3) {
+  grid-row: span 2;
+}
+.about .about-stage:nth-child(7) {
+  grid-column: span 2;
+  position: relative;
+}
+.about .about-stage:nth-child(7) .about-stage__desc {
+  width: 446px;
+}
+.about .about-stage:nth-child(7)::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 210px;
+  transform: rotate(-5deg);
+  background: url("../images/plane.png");
+  bottom: 20px;
+  right: -29px;
+}
+.about .about-stage__label {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  font-weight: 700;
+  position: relative;
+}
+.about .about-stage__label_num {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -57%);
+  color: #313131;
+}
+.about .about-stage__desc {
+  margin-left: 15px;
+  font-size: 18px;
+}
+.about .about-slider {
+  display: none;
+}
+.about .about-controllers {
+  display: none;
+}
+
+.participants {
+  padding-bottom: 120px;
+}
+.participants__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.participants__title {
+  font-family: "Merriweather";
+  text-transform: uppercase;
+  font-size: 54px;
+  color: #313131;
+  font-weight: 400;
+  display: inline;
+}
+.participants .participants-controllers {
+  display: inline-flex;
+  align-items: center;
+}
+.participants .participants-controllers__controller {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: 0.4s ease;
+  background: #313131 url("../images/svg/arrow.svg") 13px 12px no-repeat;
+}
+.participants .participants-controllers__controller:hover {
+  cursor: pointer;
+  background-color: #FBCE51;
+}
+.participants .participants-controllers__controller_next {
+  transform: rotate(-180deg);
+}
+.participants .participants-controllers__count {
+  padding: 0 15px;
+  color: rgba(49, 49, 49, 0.7);
+}
+.participants .participants-controllers__count_slide {
+  color: #313131;
+}
+.participants .participants-slider {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.participants .participants-slider__line {
+  position: relative;
+  left: 0;
+  display: flex;
+  transition: 0.4s ease;
+}
+.participants .participants-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 33.33%;
+}
+.participants .participants-slide__pic {
+  margin-bottom: 25px;
+}
+.participants .participants-slide__name {
+  font-size: 24px;
+  color: #313131;
+  margin-bottom: 10px;
+}
+.participants .participants-slide__rank {
+  font-size: 18px;
+  color: #313131;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+.participants .participants-slide__link {
+  font-size: 16px;
+  color: #3057A2;
+  border: 1px solid #3057A2;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+.participants .participants-slide__link:hover {
+  color: #FFF;
+  background-color: #3057A2;
+}
+
+.footer {
+  background-color: #E9DED4;
+}
+.footer__text {
+  padding: 40px 0 80px 0;
+  font-size: 18px;
+  opacity: 0.7;
+  color: #313131;
+}
+
+@media (max-width: 428px) {
+  .header {
+    padding: 20px 15px 0 15px;
+    background: url("../images/header-bg-mobile.png") no-repeat;
+    background-position: right bottom -31px;
+    background-size: cover;
+    height: 749px;
+  }
+  .header::after {
+    display: none;
+  }
+  .header__logo {
+    margin-bottom: 20px;
+  }
+  .header__title {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+  .header__text {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 28px;
+  }
+  .header .header-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .header-links__link {
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .support {
+    padding: 40px 15px 80px 15px;
+  }
+  .support .support-lecture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .support .support-lecture__title {
+    font-size: 31px;
+  }
+  .support .support-lecture__title_desktop {
+    display: none;
+  }
+  .support .support-lecture__title_mobile {
+    display: block;
+  }
+  .support .support-lecture__pic {
+    margin: 30px 0;
+    width: 100%;
+    height: auto;
+  }
+  .support .support-game {
+    display: flex;
+    align-items: normal;
+    flex-direction: column;
+  }
+  .support .support-game__pic {
+    max-width: 474px;
+    margin-bottom: 15px;
+  }
+  .support .support-game__wrapper {
+    margin-left: 0px;
+  }
+  .support .support-game__title {
+    font-size: 31px;
+    margin-bottom: 20px;
+  }
+  .support .support-game .game-table {
+    border-collapse: none;
+    display: flex;
+  }
+  .support .support-game .game-table__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 2px solid #D0D0D0;
+    padding: 15px 0;
+  }
+  .support .support-game .game-table__row:nth-child(3) .game-table__data_name {
+    width: 100%;
+  }
+  .support .support-game .game-table__row:nth-child(4) .game-table__data_name {
+    padding: 0px 10px 0px 0px;
+  }
+  .support .support-game .game-table__row:first-child .game-table__data_name {
+    padding: 0px 10px 10px 0px;
+  }
+  .support .support-game .game-table__row:first-child .game-table__data_desc {
+    padding: 0px;
+  }
+  .support .support-game .game-table__row:last-child .game-table__data_name {
+    padding: 0px 0px 10px 0px;
+  }
+  .support .support-game .game-table__row:last-child .game-table__data_desc {
+    padding: 0px;
+  }
+  .support .support-game .game-table__data {
+    font-size: 18px;
+    border: none;
+  }
+  .support .support-game .game-table__data_name {
+    opacity: 0.7;
+    padding: 0px 0px 10px 0px;
+  }
+  .support .support-game .game-table__data_desc {
+    padding-left: 0;
+    border-right: 0;
+  }
+  .about {
+    padding: 0px 15px 150px 15px;
+    position: relative;
+  }
+  .about::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 190px;
+    background: url("../images/plane-mobile.png");
+    top: 200px;
+    left: 20px;
+    z-index: 2;
+  }
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__wrapper {
+    margin-bottom: 165px;
+  }
+  .about__title {
+    font-size: 36px;
+  }
+  .about__link {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .about__stages {
+    display: none;
+  }
+  .about .about-slider {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  .about .about-slider__line {
+    position: relative;
+    left: 0;
+    display: flex;
+    transition: 0.4s ease;
+  }
+  .about .about-slide {
+    flex: 1 0 100%;
+  }
+  .about .about-stage {
+    flex-wrap: wrap;
+    padding: 70px 20px 40px 20px;
+  }
+  .about .about-stage__wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+  .about .about-stage__desc {
+    width: 243px;
+    margin-bottom: 15px;
+  }
+  .about .about-controllers {
+    display: inline-flex;
+    align-items: center;
+  }
+  .about .about-controllers__controller {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: 0.4s ease;
+    background: #313131 url("../images/svg/arrow.svg") 13px 12px no-repeat;
+  }
+  .about .about-controllers__controller:hover {
+    cursor: pointer;
+    background-color: #FBCE51;
+  }
+  .about .about-controllers__controller:disabled {
+    background-color: #D6D6D6;
+  }
+  .about .about-controllers__controller_next {
+    transform: rotate(-180deg);
+  }
+  .about .about-controllers__circles {
+    display: flex;
+    margin: 0 15px;
+  }
+  .about .about-controllers__circle {
+    width: 10px;
+    height: 10px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .about .about-controllers__circle:last-child {
+    margin-right: 0;
+  }
+  .about .about-controllers__circle_active {
+    background-color: #313131;
+  }
+  .participants {
+    padding: 0px 15px 80px 15px;
+  }
+  .participants__container {
+    display: flex;
+    justify-content: center;
+  }
+  .participants__title {
+    font-size: 36px;
+  }
+  .participants .participants-controllers {
+    order: 3;
+  }
+  .participants .participants-slider {
+    margin-bottom: 40px;
+  }
+  .participants .participants-slide {
+    flex: 1 0 100%;
+  }
+  .footer__text {
+    padding: 40px 15px 80px 15px;
+  }
+}/*# sourceMappingURL=style.css.map */
